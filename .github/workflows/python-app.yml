@@ -1,6 +1,5 @@
 name: Machine Learning CI/CD
 
-
 on:
   push:
     branches:
