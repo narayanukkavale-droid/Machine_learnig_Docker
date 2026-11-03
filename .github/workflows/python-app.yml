@@ -1,3 +1,4 @@
+```yaml
 name: Machine Learning CI/CD
 
 on:
@@ -60,11 +61,10 @@ jobs:
 
         run: |
           test -n "$RENDER_DEPLOY_HOOK"
+
           curl --fail --silent --show-error \
             --retry 5 \
             --retry-delay 2 \
             --request POST \
-            -x POST "$RENDER_DEPLOY_HOOK"
-
-
-            
+            "$RENDER_DEPLOY_HOOK"
+```
